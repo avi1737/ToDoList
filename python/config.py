@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 mysql_medihelp = {
     'server':"localhost",
     'username':"root",
@@ -9,3 +10,4 @@ mysql_medihelp = {
     'stocks_table' :"stocks",
     'profit_table' : "profits"
 }
+
