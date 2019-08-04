@@ -53,6 +53,7 @@ h1{
 }
 .eye{
   position: absolute;
+  margin-right: 10px;
 }
 #hide1{
   display: none;
@@ -85,4 +86,17 @@ h1{
 }
 #eye{
   cursor: pointer;
+}
+
+.btn
+{
+  color: white;
+  padding-left: 10px;
+  margin:20px 50px; 
+}
+.btn:hover{
+  color:blue;
+}
+.login-btn:hover{
+  background-color:blue;
 }

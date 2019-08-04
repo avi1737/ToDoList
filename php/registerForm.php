@@ -1,37 +1,38 @@
 <?php
-$conn = mysqli_connect("127.0.0.1","root","", 'intp_project') or die(mysqli_error());
-  if (!$conn) {
-    echo "error connecting to mysql\n";
-	echo " does'nt connected to database\n";
-	}
+
+
+include('db_config.php');
 if(isset($_POST['submit']))
 	{ 
 
-	$fname=$_POST['fname'];
-	$nick=$_POST['nickname'];
+	$name=$_POST['name'];
 	$number=$_POST['Number'];
 	$Shopname=$_POST['shopname'];
   $shopAdd=$_POST['ShopAdd'];
 	$email=$_POST['email'];
 	$password=md5($_POST['password']);
-  $gender=$_POST['gender'];
-  $key=$_POST['product'];
+        
+    $registered_users = "SELECT Email from registered_users";
+    $registered_email = mysqli_query($conn ,$registered_users)
+    if($email == $registered_users){
 
-  $query="INSERT INTO new_registration (fname,nickname,Number,shopname,ShopAdd,email,password,gender,product) VALUES ('$fname','$nick','$number','$Shopname','$shopAdd','$email','$password','$gender','$key')";
-  echo "<br> $query";
-  echo "<br>$fname<br> $nick<br> $number<br> $Shopname<br> $shopAdd<br> $email<br> $password<br> $gender<br> $key<br>";
-    if(mysqli_query($conn,$query) == TRUE)
-        {
-          echo "INSERT Successful";
-          header('location:loginpage.php');
-   	    }
-   	else
-   	    {
-   		   echo"error: ".$query."<br>". mysqli_error($conn);
-        }
-	  } 
+    }
+
+    $query="INSERT INTO registered_users (name,mobile_number,shop_name,shop_address,Email,password) VALUES ('$name','$number','$Shopname','$shopAdd','$email','$password')";
+        if(mysqli_query($conn,$query) == TRUE)
+          {
+            echo "INSERT Successful";
+            header('location:../html/loginpage.php?id=registered_user');
+   	      }
+   	    else
+   	      {
+   		     echo"error: ".$query."<br>". mysqli_error($conn);
+          }
+  } 
 else 
 	{
 	echo "values not received";
 	}
+
 ?>
+

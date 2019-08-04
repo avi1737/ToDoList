@@ -15,14 +15,8 @@
         	
         	<tr>     		
          		<td><label>Full Name : </label></td>
-         		<td><input type="text" name="fname" placeholder="Enter your full name" id="fullname" autofocus required></td>
-            </tr>
-            
-            <tr>     		
-         		<td><label>Nick name : </label></td>
-         		<td><input type="text" name="nickname" placeholder="Enter your nick name" id="nick" required></td>
-            </tr>
-            
+         		<td><input type="text" name="name" placeholder="Enter your full name" id="fullname" autofocus required></td>
+            </tr>            
             <tr>
          		<td><label>Contact Number : </label></td>
          		<td><select id="ph">
@@ -72,13 +66,6 @@
             </tr>
 			
 			<tr>
-         		<td><label>Gender : </label></td>
-                <td><input type="radio" name="gender" id="male"value="Male"><span id="male" required>Male</span>&nbsp;&nbsp;
-                <input type="radio" name="gender" id="female" value="female"><span id="female"required>Female</span>&nbsp;&nbsp;
-                <input type="radio" name="gender" id="mmale" value="Transgender"><span id="mmale" required>Transgender</span>&nbsp;&nbsp;</td>
-            </tr>
-			
-			<tr>
          		<td><label>Product Key : </label></td>
          		<td><input type="text" name="product" placeholder="Enter the product key" id="product" required><span id="star3"></span><p id="invalidKey"></p></td>
             </tr>
@@ -95,6 +82,13 @@
        	function Validate() {
           	var password = document.getElementById("password").value;
             var confirmPassword = document.getElementById("pass").value;
+            var key = document.getElementById("product").value;
+            var original_key =  "amafhh786";
+            if (key != original_key) {
+              document.getElementById("invalidKey").innerHTML="product key doesn\'t match ";
+              document.getElementById("product").style.borderColor = "red";
+              document.getElementById("star3").innerHTML=" *";  
+            }
             if (confirmPassword=="") {
           		document.getElementById("spam").innerHTML="confirm password field is empty";
            		document.getElementById("pass").style.borderColor = "red";

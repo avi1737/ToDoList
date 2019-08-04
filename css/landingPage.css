@@ -22,6 +22,16 @@ nav{
 .options{
     float: left;
     width: 15%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+#logo:hover {
+    background-color: red;
+}
+
+#hover_bg:hover{
+    color: red;
 }
 .navbar-brand a{
     line-height: 60px;
@@ -66,7 +76,7 @@ list-style: none;
 }
 
 .nav-items ul li ul li:hover{
-    background-color: black;
+    background-color: red;
 }
 .nav-items ul li ul li:hover a{
     color: white;
@@ -74,6 +84,7 @@ list-style: none;
 .nav-items ul li:hover ul{
     display: block;
 }
+
 .container{
     width: 100%;
     height: 500px;
@@ -85,11 +96,11 @@ list-style: none;
     color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 10px 20px;
+    padding: 9px 14px;
     border: 1px solid white;
 }
 .options a:hover{
-    background-color: rgb(32, 216, 32);
+    background-color: red;
 }
 .container h1{
     font-size: 65px;
@@ -106,7 +117,7 @@ list-style: none;
 .brand-container{
     margin: 100px auto;
     width: 1200px;
-    height: 400px;
+    height: 420px;
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -116,7 +127,7 @@ list-style: none;
     background-color: white;
     border-radius: 10px;
     box-shadow: 5px 7px 5px rgb(177, 175, 175);
-    height:350px;
+    height:370px;
     text-align: center;
     overflow: hidden;
 }
@@ -141,19 +152,14 @@ list-style: none;
     font-size: 18px;
     outline: 0px;
     border: none;
-    padding: 12px 20px;
+    padding: 15px 20px;
     margin: 20px 0px;
 }
+
 .info-card button:hover{
     background-color: white;
 }
-.info-card a{
-    color: green;
-    font-size: 22px;
-    text-decoration: none;
-    padding: 2px 12px;
-    border: 1px solid green;
-}
+
 .about-container{
     background-color:black;
     height: auto;
@@ -184,43 +190,12 @@ nav{
     padding: 10px;
 }
 
-.trending{
-    margin: 0px auto;
-    width: 1200px;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    padding: 30px;
-    grid-gap: 40px;
-}
-.tdata{
-    height: 350px;
-    text-align: center;
-    font-size: 23px;
-    font-weight: bolder;
-}
-.img{
-    width: 100%;
-    height: 270px;
-}
-.tdata button{
-    padding: 12px 20px;
-    outline: 0px;
-    border: none;
-    color: black;
-    border-radius: 5px;
-    color: white;
-    font-size: 18px;
-    background-color: dodgerblue;
-    cursor: pointer;
-}
 
 .contact-container{
     transition: 0.4s ease;
     width: 100%;
     height: 550px;
-    background-color: darkslategrey;
+    background-color: black;
     margin: 100px 0px;
     padding: 45px;
 }
@@ -250,7 +225,7 @@ nav{
     width: 50%;
     height: 100%;
 }
-.contact-form form input{
+.contact-form form input,textarea{
     width: 70%;
     padding: 12px 20px;
     border-radius: 10px;
@@ -266,19 +241,19 @@ nav{
 }
 .address{
     font-size: 18px;
-    padding: 20px;
+    padding: 15px;
 }
 .address p{
     font-size: 22px;
     text-align: left;
 }
 .footer{
-    margin: 20px 0px;
-    width: 100%;
+    margin: 15px 380px ;
+    width: 50%;
     height: 70px;
-    background-color: darkslategray;
-    bottom: 0px;
-text-align: center;
-color: white;
-font-size: 20px;
+    border-radius: 10px;    
+    background-color: black;   
+    text-align: center;
+    color: white;
+    font-size: 20px;
 }
