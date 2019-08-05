@@ -1,11 +1,29 @@
+<?php
+session_start();
+
+if(isset($_SESSION['user'])){
+	unset($_SESSION['user']);
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<?php
-	echo isset($_GET['id']);
+	if(isset($_SESSION['password_reset'])){ 
+		echo $_SESSION['password_reset'];
+		if($_SESSION['password_reset'] == "True" ){
+				echo '<script type="text/javascript">';
+				echo "swal('congrats!', 'your password has changed','success');";
+				echo '</script>';
+			}
+			unset($_SESSION['password_reset']);
+		}	
 		if(isset($_GET['id'])){
+			echo $_GET['id'];
 			if($_GET['id'] == 'registered_user'){
 				echo '<script type="text/javascript">';
 				echo "swal('Good job!', 'you have succesfully registered!','success');";
@@ -23,8 +41,9 @@
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<form method="post" action="../php/authentication.php">
 	<div class="form-box">
+	<form method="post" action="../php/authentication.php">
+	
 		<h1>Login</h1>
 		
 		<div class="input-box">
@@ -41,11 +60,10 @@
 		</div>
 		<input type="submit" class="login-btn" value="Login" name="Login">
 		
-		<a href="registerForm.html" class="btn" id="Register-btn">Register now</a>	
-		<a href="#" class="btn" id="forgotton-pass-btn">Forgot your password ?</a>
-
-	</div>		
-	</form>
+		<a href="registerForm.php" class="btn" id="Register-btn">Register now</a>	
+	<a href="reset_password_form.php" class="btn" id="forgotton-pass-btn" onclick="forgot_password()">Forgot your password ?</a>
+</form>
+	</div>	
 	<script type="text/javascript">
 		function show(){
 			var x = document.getElementById("pass");
@@ -62,6 +80,7 @@
 				z.style.display = "block";
 			}
 		}
+
 	</script>
 </body>
 </html>

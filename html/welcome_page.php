@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +44,7 @@
                <li><a href="#" id="hover_bg">Home</a></li>
                <li><a href="#Services" id="hover_bg">Services</a>
               <?php
-            if(isset($_GET['id'])){
+            if(isset($_SESSION['user'])){
               ?>
               <li><a href="#" id="hover_bg">Tools</a></li>
               <?php } ?>      
@@ -50,10 +56,10 @@
        <div class="options">
         <div class="nav-items_sign_in">
         <?php
-            if(isset($_GET['id'])){
+            if(isset($_SESSION['user'])){
           ?>
           
-         <li><a href="loginpage.php"><?php echo $_GET['id'] ?>/Logout</a>
+         <li><a href="loginpage.php"><?php echo $_SESSION['user'] ?>/Logout</a>
             </li>
           
         <?php }else{ ?>

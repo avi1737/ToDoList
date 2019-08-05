@@ -15,6 +15,7 @@ body{
   padding: 25px 0;
   color: #fff;
   box-shadow: 0 0 20px 2px rgba(0,0,0,0.5);
+  display:block;
 }
 h1{
   text-align: center;
@@ -99,4 +100,63 @@ h1{
 }
 .login-btn:hover{
   background-color:blue;
+}
+.form-box_forgot{
+  width: 500px;
+  background: rgba(0,0,0,0.8);
+  margin: 12% auto;
+  padding: 25px 0;
+  color: #fff;
+  box-shadow: 0 0 20px 2px rgba(0,0,0,0.5);
+}
+.form-box_forgot h1{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.forgot_password{
+  display: block;
+}
+#new_password{
+  margin-top:20px; 
+  width: 90%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+}
+#product_key   {
+  margin-top:20px; 
+  width: 90%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+}
+.input-box-pass{
+  margin: 31px auto;
+  width: 80%;
+  border-bottom: 1px solid #fff;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 18px;
+} 
+.login-btn-pass{
+  margin: 40px auto 20px;
+  width: 80%;
+  display: block;
+  outline: none;
+  padding: 10px 0;
+  border: 1px solid #fff;
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+}
+.login-btn-pass:hover{
+  background-color:blue;
+}
+.reset_password_form{
+  display: none;
 }
