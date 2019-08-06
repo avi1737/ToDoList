@@ -13,7 +13,7 @@ if(isset($_POST['submit']))
 	$password=md5($_POST['password']);
         
     $registered_users = "SELECT Email from registered_users";
-    $registered_email = mysqli_query($conn ,$registered_users)
+    $registered_email = mysqli_query($conn ,$registered_users);
     if($email == $registered_users){
 
     }

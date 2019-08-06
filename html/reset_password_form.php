@@ -20,9 +20,9 @@
 			</div>	
 			<div id="product_key_div">
 			<div class="input-box-pass">
-				<input type="text" name="product" autocomplete="off" onkeyup="check_key()" id="product_key" placeholder="enter the product key given to you">
+				<input type="text" name="product" autocomplete="off" onkeyup="check_key()" id="product_key" placeholder="Enter the product key assigned">
 			</div>
-			<a href="loginpage.php" class="btn">Go Back</a>
+			<a href="loginpage.php" class="btn">Go Back to login page</a>
 				</div>
 				<div class="reset_password_form" id="reset_password_form">
 					

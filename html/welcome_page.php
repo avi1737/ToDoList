@@ -2,7 +2,7 @@
 
 session_start();
 
-?>
+?>  
 
 <!DOCTYPE html>
 <html lang="en">
@@ -133,12 +133,12 @@ session_start();
 
    <div class="about-container" id="about">
        <h2>ABOUT US</h2>
-       <p>MEDIHELP is not just an app but it's a vision of its Founder Mr. Husain Abbas to create something so easy that even person with no prior knowledge can use it and without the help of our Co-founders none of this would be possible.</p>
+       <p>MEDIHELP is not just an app but it's a vision of its Founder Mr. Husain Abbas & Co. founder's to create something so easy that even person without any prior knowledge of pharmacy can use it and without the help of our Co-founders none of this would be possible.</p>
        <p>We are proud to complement the services of our local pharmacy through accurate and detailed information of their medicine. Our efficient team of Pharmacists and Developers strive to provide prompt and friendly service. Quality and accuracy are values we refuse to compromise.</p>
-       <p>our Co-founders are </p>
+       <p>Our Co-founders are </p>
        <ul>
-           <li>Mr Ganesh Soni</li>
-           <li>Mr Avinash Varpeti</li>
+           <li>Mr. Ganesh Soni</li>
+           <li>Mr. Avinash Varpeti</li>
        </ul>
    </div>
 
