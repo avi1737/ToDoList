@@ -13,4 +13,4 @@ conn = engine.connect()
 df = pd.read_csv("C:/xampp/htdocs/intp/python/U031998124_111687.csv",keep_default_na=False)
 df['Available'] = df['Qty'] 
 df['Date_added']=datetime.datetime.now()
-df.to_sql('stocks', conn , if_exists ="replace", index=False)
+df.to_sql('stocks', conn , if_exists ="append", index=False)

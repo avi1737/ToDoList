@@ -1,6 +1,23 @@
+<?php 
+session_start();
+
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <?php
+  if (isset($_SESSION['email_taken'])) {
+    if ($_SESSION['email_taken'] == "True") {
+  
+
+    echo '<script type="text/javascript">';
+        echo "swal('congrats!', 'your password has changed','success');";
+        echo '</script>';
+}
+}
+?>
 	<title>Registration Page</title>
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/StyleRegister.css">
@@ -88,6 +105,7 @@
               document.getElementById("invalidKey").innerHTML="product key doesn\'t match ";
               document.getElementById("product").style.borderColor = "red";
               document.getElementById("star3").innerHTML=" *";  
+              return false;
             }
             if (confirmPassword=="") {
           		document.getElementById("spam").innerHTML="confirm password field is empty";

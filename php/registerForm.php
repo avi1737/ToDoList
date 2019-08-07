@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 include('db_config.php');
 if(isset($_POST['submit']))
@@ -11,18 +11,24 @@ if(isset($_POST['submit']))
   $shopAdd=$_POST['ShopAdd'];
 	$email=$_POST['email'];
 	$password=md5($_POST['password']);
-        
+
+/*        
     $registered_users = "SELECT Email from registered_users";
     $registered_email = mysqli_query($conn ,$registered_users);
-    if($email == $registered_users){
-
+    $Email = mysqli_fetch_assoc($registered_email);
+    while($Email){
+      if ($Email['Email']==$email) {
+        $_SESSION['email_taken'] = "True";
+        header('location:../html/registerForm.php?id=email_taken');
+      }
     }
 
+  */
     $query="INSERT INTO registered_users (name,mobile_number,shop_name,shop_address,Email,password) VALUES ('$name','$number','$Shopname','$shopAdd','$email','$password')";
         if(mysqli_query($conn,$query) == TRUE)
           {
-            echo "INSERT Successful";
-            header('location:../html/loginpage.php?id=registered_user');
+            $_SESSION['user_entry'] = "success";
+            header('location:../html/loginpage.php');
    	      }
    	    else
    	      {

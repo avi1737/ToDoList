@@ -18,8 +18,9 @@ if(isset($_POST['Login']))
 	    	header('location:../html/welcome_page.php');
 	    }
 	    else{
+	    	$_SESSION['user_entry'] = "invalid";
 	    	echo "invalid username or password";
-	    	header('location:../html/loginpage.php?id=invalid');
+	    	header('location:../html/loginpage.php');
 	    }
 	}
 if (isset($_POST['reset'])) {

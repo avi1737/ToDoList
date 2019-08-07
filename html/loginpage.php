@@ -22,17 +22,18 @@ if(isset($_SESSION['user'])){
 			}
 			unset($_SESSION['password_reset']);
 		}	
-		if(isset($_GET['id'])){
-			echo $_GET['id'];
-			if($_GET['id'] == 'registered_user'){
+		if(isset($_SESSION['user_entry'])){
+			echo $_SESSION['user_entry'];
+			if($_SESSION['user_entry'] == 'success'){
 				echo '<script type="text/javascript">';
 				echo "swal('Good job!', 'you have succesfully registered!','success');";
 				echo '</script>';	
-			}elseif($_GET['id'] == 'invalid'){
+			}elseif($_SESSION['user_entry'] == 'invalid'){
 				echo '<script type="text/javascript">';
 				echo "swal('OOPS', 'INVALID EMAIL OR PASSWORD','error');";
 				echo '</script>';
 			}
+			unset($_SESSION['user_entry']);
 		}
 
 		?>

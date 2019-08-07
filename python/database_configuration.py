@@ -149,7 +149,7 @@ invoices_trigger_query="""
                         SET CUSTOMER = (SELECT DISTINCT(Customer) FROM `medihelp`.`stocks`);
                         SET INVDATE = (SELECT DISTINCT(InvDate) FROM `medihelp`.`stocks`);
                         SET INVAMT = (SELECT DISTINCT(InvAmt) FROM `medihelp`.`stocks`);
-                        SET TOTAL_MEDICINE = (SELECT SUm(Qty) FROM `medihelp`.`stocks`);
+                        SET TOTAL_MEDICINE = (SELECT SUM(Qty) FROM `medihelp`.`stocks`);
                         SET TOTAL_MEDICINE_AMT = (SELECT SUM(INetAmt) FROM `medihelp`.`stocks`);
                         SET TOTAL_MRP_AMT = (SELECT SUM(MRP) FROM `medihelp`.`stocks`);
                         
