@@ -1,5 +1,7 @@
 body{
-	background-image: url(../images/bg.jpg)
+    background-image: url(../images/cover.jfif);
+    background-repeat: no-repeat;
+    padding-bottom: 15px;
 }
 
 h1{
@@ -8,41 +10,53 @@ h1{
 	text-align: center;
     font-family: sans-serif;
     font-style: italic;
+    width: 300px;
+    margin-left: 530px;
+    opacity: 0.6;
 }
 
 h2{
 	text-align: center;
-	padding: 20px;
-	margin-bottom: -17px;
+	padding-top: 15px;
+    margin-top: 5px;
+    margin-bottom: 7px;
 }
 
 .register{
-	background: aliceblue;
-	margin: 0px 0px 0px 350px;
-    margin-right: 350px;
-    /*border-radius: 10px;*/
-    font-size: 15px;
-    font-family: sans-serif;
-    font-style: italic;
+    background-image: url(../images/bg.jpg);
+    margin:0px 830px 0px 250px;
+    height: 607px;
+    border-color: 7px solid black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    opacity: 0.8px;
 }
 
 .form{
 	margin-left: 35px;
     font-size: 17px;
     font-family: sans-serif;
+    border: 2px solid black;
+    border-left-color: none;
+    background-color: white;
+    padding:0px 10px;
+    width: 570px;
+    height: 605px;
+    margin-top: -10px;
+    margin-left: 250px;
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px;
+    opacity: 0.8;
 }
 
 label{
     display: inline-block;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 18px;
 }
 
-#male ,#female ,#mmale{
-    font-weight: bold;
-}
-
 #spam ,#phone ,#EMAIL ,#invalidKey{
+    margin-top: 2px;
     font-size: 15px;
     color: red;
     font-weight: bold;
@@ -52,34 +66,36 @@ label{
     font-size: 20px;
     color: red;
     font-weight: bolder;
-    display: inline;
+    display: inline-block;
 }
 
 #fullname ,#nick ,#shopname, #Shopadd, #product{
     width: 330px;
     height: 25px;
-    border-radius: 5px;
     outline: 0;
     border: none;
-    /*letter-spacing: 1px;*/
-    font-size: 16px;
-    border-bottom: 4px solid lightblue;
-    border-left: 4px solid lightblue;
+    font-size: 16px;/*
+    border-bottom: 2px solid lightblue;
+    border-left: 2px solid lightblue;
+    border-left: 2px solid black;*/
+    border-bottom: 2px solid black;
     background: transparent;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 #email{
     width: 330px;
     height: 25px;
-    border-radius: 5px;
     outline: 0;
     border: none;
-    /*letter-spacing: 1px;*/
-    font-size: 16px;
-    border-bottom: 4px solid lightblue;
-    border-left: 4px solid lightblue;
-    background: transparent;    
+    font-size: 16px;/*
+    border-bottom: 2px solid lightblue;
+    border-left: 2px solid lightblue;
+    border-left: 2px solid black;*/
+    border-bottom: 2px solid black;
+    background: transparent; 
+    font-weight: bold;   
 }
 
 ::placeholder{
@@ -89,15 +105,16 @@ label{
 #password, #pass{
     width: 330px;
     height: 25px;
-    border-radius: 5px;
     outline: none;  
     border: none;
-    /*letter-spacing: 1px; */
     font-size: 16px;
     background: transparent;
-    border-bottom: 4px solid lightblue; 
-    border-left: 4px solid lightblue;/*
-    background-image: url(../images/Capture.png);
+    font-weight: bold;/*
+    border-bottom: 2px solid lightblue; 
+    border-left: 2px solid lightblue;
+    border-left: 2px solid black;*/
+    border-bottom: 2px solid black;
+    /*background-image: url(../images/Capture.png);
     background-repeat: no-repeat;
     background-position: 290px 6.5px; 
     background-size: 10% 50%; */
@@ -106,23 +123,28 @@ label{
 #ph{
     width: 50px;
     height: 31px;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     outline: 0;
     border: none;
-    border-bottom: 4px solid lightblue; 
-    border-left: 4px solid lightblue;
+    font-weight: bold;/*
+    border-bottom: 2px solid lightblue; 
+    border-left: 2px solid lightblue;
+    border-left: 2px solid black;*/
+    border-bottom: 2px solid black;
 }
 
 #Phone{
     width: 276px;
     height: 25px;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     outline: 0;
     border: none;
-    background: transparent;
-    border-bottom: 4px solid lightblue; 
-    border-left: 4px solid lightblue;
-    /*border-bottom: 2px solid lightblue; */
+    font-weight: bold;
+    background: transparent;/*
+    border-bottom: 2px solid lightblue; 
+    border-left: 2px solid lightblue;
+    border-left: 2px solid black;*/
+    border-bottom: 2px solid black;
     font-size: 16px;
 }
 
@@ -151,7 +173,7 @@ label{
 }
 
 #reset:hover{
-    background-color: red;
+    background-color: orange;
     opacity: 0.8;
 }
 
@@ -193,6 +215,6 @@ label{
 }
 
 #show{
-    margin-left: 5px;
+    margin-left: 10px;
     margin-top: 4px;
 }

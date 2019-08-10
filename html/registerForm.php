@@ -1,24 +1,17 @@
-<?php 
-session_start();
-
- ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+	<title>Registration Page</title>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <?php
   if (isset($_SESSION['email_taken'])) {
     if ($_SESSION['email_taken'] == "True") {
-  
-
-    echo '<script type="text/javascript">';
-        echo "swal('congrats!', 'your password has changed','success');";
-        echo '</script>';
-}
-}
-?>
-	<title>Registration Page</title>
+      echo '<script type="text/javascript">';
+      echo "swal('congrats!', 'your password has changed','success');";
+      echo '</script>';
+    }
+  }
+  ?>
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/StyleRegister.css">
 </head>
@@ -37,11 +30,11 @@ session_start();
             <tr>
          		<td><label>Contact Number : </label></td>
          		<td><select id="ph">
-         			<option>+91</option>
-         			<option>+022</option>
-         			<option>+93</option>
-         			<option>+92</option>
-         			<option>+199</option>
+         			<option>+ 91</option>
+         			<option>+ 022</option>
+         			<option>+ 93</option>
+         			<option>+ 92</option>
+         			<option>+ 199</option>
          		</select>
          		<input type="Number" name="Number" placeholder="Enter your 10 digit mobile number" id="Phone" onchange="return validateNumber()" required><span id="star"></span><p id="phone" ></p> </td>
             </tr>
@@ -84,7 +77,7 @@ session_start();
 			
 			<tr>
          		<td><label>Product Key : </label></td>
-         		<td><input type="text" name="product" placeholder="Enter the product key" id="product" required><span id="star3"></span><p id="invalidKey"></p></td>
+         		<td><input type="text" name="product" placeholder="Enter the product key" id="product" onchange="return Validate()" required><span id="star3"></span><p id="invalidKey"></p></td>
             </tr>
 
             <tr>  
@@ -102,10 +95,9 @@ session_start();
             var key = document.getElementById("product").value;
             var original_key =  "amafhh786";
             if (key != original_key) {
-              document.getElementById("invalidKey").innerHTML="product key doesn\'t match ";
+              document.getElementById("invalidKey").innerHTML="Invalid Key";
               document.getElementById("product").style.borderColor = "red";
               document.getElementById("star3").innerHTML=" *";  
-              return false;
             }
             if (confirmPassword=="") {
           		document.getElementById("spam").innerHTML="confirm password field is empty";
@@ -121,9 +113,11 @@ session_start();
                	return false;
                	}
            	else{
-           		document.getElementById("pass").style.borderColor = "lightblue";
+           		  document.getElementById("pass").style.borderColor = "black";
                	document.getElementById("spam").innerHTML="";
                	document.getElementById("star2").innerHTML="";
+                document.getElementById("invalidKey").innerHTML="";
+                document.getElementById("product").style.borderColor = "black";
            	}
         }
 				
@@ -138,7 +132,7 @@ session_start();
             else{
             	document.getElementById("phone").innerHTML="";
             	document.getElementById("star").innerHTML="";
-            	document.getElementById("Phone").style.borderColor="lightblue";
+            	document.getElementById("Phone").style.borderColor="black";
             }
         }
 
@@ -160,7 +154,7 @@ session_start();
 			}
 			else{
 				document.getElementById("EMAIL").innerHTML="";
-				document.getElementById("email").style.borderColor="lightblue";	
+				document.getElementById("email").style.borderColor="black";	
 				document.getElementById("star1").innerHTML=""
 				} 
 			/*		
