@@ -13,7 +13,7 @@ if(isset($_SESSION['user'])){
 	
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<?php
-	if(isset($_SESSION['password_reset'])){ 
+	if(!empty($_SESSION['password_reset'])){ 
 		echo $_SESSION['password_reset'];
 		if($_SESSION['password_reset'] == "True" ){
 				echo '<script type="text/javascript">';
@@ -22,8 +22,7 @@ if(isset($_SESSION['user'])){
 			}
 			unset($_SESSION['password_reset']);
 		}	
-		if(isset($_SESSION['user_entry'])){
-			echo $_SESSION['user_entry'];
+		if(!empty($_SESSION['user_entry'])){
 			if($_SESSION['user_entry'] == 'success'){
 				echo '<script type="text/javascript">';
 				echo "swal('Good job!', 'you have succesfully registered!','success');";
