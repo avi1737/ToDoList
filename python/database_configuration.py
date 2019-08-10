@@ -51,6 +51,27 @@ invoice_query = """
                                 
 cursor.execute(invoice_query)                                
 
+medicine_info = """
+                CREATE TABLE `medicine_info` (
+                 `id` int(11) NOT NULL AUTO_INCREMENT,
+                 `medicine_name` text DEFAULT NULL,
+                 `Company_Name` text DEFAULT NULL,
+                 `Packaging_of_Product` text DEFAULT NULL,
+                 `Compositions` text DEFAULT NULL,
+                 `Type_Of_Medicine` text DEFAULT NULL,
+                 `Alchohol_Interaction` text DEFAULT NULL,
+                 `Pregnancy_Interaction` text DEFAULT NULL,
+                 `Lactation_Interaction` text DEFAULT NULL,
+                 `uses` text DEFAULT NULL,
+                 `How_to_Use` text DEFAULT NULL,
+                 `Dosage` text DEFAULT NULL,
+                 `Common_Side_Effect` text DEFAULT NULL,
+                 PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1           
+                """  
+
+cursor.execute(medicine_info)
+
 stocks_query = """
                 CREATE TABLE `medihelp`.`stocks` (
                      `ID` int(11) NOT NULL AUTO_INCREMENT,
