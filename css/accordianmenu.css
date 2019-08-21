@@ -1,0 +1,156 @@
+.menu-container{
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+nav{
+    background-color: rgba(0, 0, 0, 1);
+    height: 60px;
+    width: 100%;
+    transition: 0.4s ease;
+}
+.navbar-brand{
+    width: 25%;
+    float: left;
+}
+.nav-items{
+    float: left;
+    width: 60%;
+}
+.options{
+    float: left;
+    width: 15%;
+}
+.navbar-brand a{
+    line-height: 60px;
+    text-decoration: none;
+    margin: 0px 20px;
+    font-weight: bold;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    padding: 5px 5px;
+    border: 2px solid white;
+}
+.nav-items ul{
+list-style: none;
+}
+.nav-items ul li{
+    display: inline-block;
+    line-height: 60px;
+    padding: 0px 20px;
+}
+.nav-items ul li a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.nav-items ul li ul{
+    position: absolute;
+    width: 200px;
+    text-align: center;
+    background-color:white;
+    margin-left: -50px;
+    border-radius: 10px;
+    display: none;
+    opacity: 0.8;
+}
+.nav-items ul li ul li{
+    width: 100%;
+}
+.nav-items ul li ul li a{
+    color: black;
+}
+
+.nav-items ul li ul li:hover{
+    background-color: black;
+}
+.nav-items ul li ul li:hover a{
+    color: white;
+}
+.nav-items ul li:hover ul{
+    display: block;
+}
+
+*{
+    list-style: none;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: #e8ecf1;
+}
+.menu{
+    width: 300px;
+    overflow: hidden;
+    border-radius: 0px 8px 8px 0px;
+}
+.item{
+    overflow: hidden;
+}
+.btn{
+    padding: 14px 30px;
+    background-color: #19b5fe;
+    display: block;
+    color: white;
+    border-bottom: 2px solid #424244;
+}
+.btn:nth-last-child(btn){
+    border: none;
+}
+.s-menu{
+    background: #424244;
+    overflow: hidden;
+    transition: 0.3s max-height;
+    max-height: 0px;
+}
+.s-menu a{
+    color: white;
+    display: block;
+    padding: 14px 30px;
+}
+.item:target .s-menu{
+    max-height: 10em;
+}
+.options a{
+    color: white;
+    line-height: 60px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+.options a:hover{
+    background: white;
+    color: black;
+    border-radius: 14px;
+}
+i{
+   padding-right: 5px;
+}
+.s-menu a:hover{
+   text-decoration: underline;
+}
+.content{
+    float: left;
+    width: 600px;
+    padding: 25px;
+   height: auto;
+    margin: 30px 150px;
+}
+.menu-container{
+    float: left;
+}
+.input{
+width: 100%;
+padding: 8px 14px;
+border-radius: 10px;
+outline: 0px;
+border: none;
+margin: 15px 0px;
+}
+.input:focus{
+    box-shadow: 4px 4px 8px darkturquoise;
+}
